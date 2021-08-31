@@ -1,7 +1,23 @@
 let cards = document.getElementsByClassName('country');
-for(let i=0; i<cards.length;  i++){
-    setTimeout(function(){
-        cards[i].style.opacity = ' 1';
-    }, (i+1)*3000)
+
+
+
+function changedPicture (){
+    
+    let i = 0
+ {
+       setInterval(function(){
+           if(i==cards.length){
+               i=0;
+               for(el of cards){
+                   el.style.opacity = '0'
+               }
+           }
+           cards[i].style.opacity = '1';
+           i++;
+         
+       }, 2000)
+   }
 }
 
+changedPicture()
